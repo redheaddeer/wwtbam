@@ -73,7 +73,7 @@ namespace wwtbam
 
             button6.Text = "Вопросы закончились, начать сначала?";
             button6.Enabled = true;
-            button5.Click += new System.EventHandler(resetGame);
+            button6.Click += new System.EventHandler(resetGame);
         }
 
         private void button0_Click(object sender, EventArgs e)
@@ -235,7 +235,7 @@ namespace wwtbam
             button4.ForeColor = System.Drawing.Color.Black;
         }
 
-        private void resetGame() {
+        private void resetGame(object sender, EventArgs e) {
             Rounds(gameData);
         }
     }

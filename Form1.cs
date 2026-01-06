@@ -1,15 +1,8 @@
 ﻿using System;
 using System.IO;
-
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Threading;
 
 namespace wwtbam
 {
@@ -36,7 +29,8 @@ namespace wwtbam
             button0.Text = "Выберите файл для начала игры";
         }
 
-        private async Task Rounds(string[] gameData) {
+        private async Task Rounds(string[] gameData)
+        {
             foreach (var roundData in gameData)
             {
                 nextStep = new TaskCompletionSource<bool>();
@@ -69,7 +63,8 @@ namespace wwtbam
                     {
                         button5.Enabled = true;
                         selected = "A";
-                    } else if (button2.Checked)
+                    }
+                    else if (button2.Checked)
                     {
                         button5.Enabled = true;
                         selected = "B";
@@ -79,7 +74,7 @@ namespace wwtbam
                         button5.Enabled = true;
                         selected = "C";
                     }
-                    else if ( button4.Checked)
+                    else if (button4.Checked)
                     {
                         button5.Enabled = true;
                         selected = "D";
@@ -137,7 +132,8 @@ namespace wwtbam
             nextStep.TrySetResult(true);
         }
 
-        private void showRight(string right, string selected) {
+        private void showRight(string right, string selected)
+        {
             string fixedRight = "";
             switch (right)
             {
@@ -182,7 +178,8 @@ namespace wwtbam
                 default:
                     break;
             }
-            if (fixedRight != selected) {
+            if (fixedRight != selected)
+            {
                 switch (selected)
                 {
                     case "A":
@@ -207,7 +204,8 @@ namespace wwtbam
             }
         }
 
-        private void resetState() {
+        private void resetState()
+        {
             button1.Visible = true;
             button2.Visible = true;
             button3.Visible = true;

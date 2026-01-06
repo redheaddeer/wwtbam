@@ -49,7 +49,6 @@
             this.label1.Size = new System.Drawing.Size(143, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "Начало игры";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox1
             // 
@@ -58,7 +57,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(800, 33);
             this.textBox1.TabIndex = 5;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // button1
             // 
@@ -69,7 +67,6 @@
             this.button1.Size = new System.Drawing.Size(72, 28);
             this.button1.TabIndex = 0;
             this.button1.UseVisualStyleBackColor = true;
-            this.button1.CheckedChanged += new System.EventHandler(this.button1_CheckedChanged);
             // 
             // button2
             // 
@@ -153,7 +150,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Who Wants to Be a Millionaire?";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

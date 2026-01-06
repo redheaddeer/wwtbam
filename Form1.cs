@@ -56,28 +56,10 @@ namespace wwtbam
                 button3.Text = _c;
                 button4.Text = _d;
 
-
                 while (!button5.Enabled)
                 {
-                    if (button1.Checked)
-                    {
+                    if (button1.Checked || button2.Checked || button3.Checked || button4.Checked) {
                         button5.Enabled = true;
-                        selected = "A";
-                    }
-                    else if (button2.Checked)
-                    {
-                        button5.Enabled = true;
-                        selected = "B";
-                    }
-                    else if (button3.Checked)
-                    {
-                        button5.Enabled = true;
-                        selected = "C";
-                    }
-                    else if (button4.Checked)
-                    {
-                        button5.Enabled = true;
-                        selected = "D";
                     }
                     await Task.Delay(100);
                 }
@@ -88,6 +70,10 @@ namespace wwtbam
                 }
                 await nextStep.Task;
             }
+
+            button6.Text = "Вопросы закончились, начать сначала?";
+            button6.Enabled = true;
+            button5.Click += new System.EventHandler(resetGame);
         }
 
         private void button0_Click(object sender, EventArgs e)
@@ -117,10 +103,27 @@ namespace wwtbam
 
         private void button5_Click(object sender, EventArgs e)
         {
+            if (button1.Checked)
+            {
+                selected = "A";
+            }
+            else if (button2.Checked)
+            {
+                selected = "B";
+            }
+            else if (button3.Checked)
+            {
+                selected = "C";
+            }
+            else if (button4.Checked)
+            {
+                selected = "D";
+            }
             showRight(right, selected);
             button5.Visible = false;
             button6.Visible = true;
         }
+
         private void button6_Click(object sender, EventArgs e)
         {
             button1.Checked = false;
@@ -230,6 +233,10 @@ namespace wwtbam
             button3.ForeColor = System.Drawing.Color.Black;
             button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             button4.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void resetGame() {
+            Rounds(gameData);
         }
     }
 }

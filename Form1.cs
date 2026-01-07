@@ -33,42 +33,46 @@ namespace wwtbam
         {
             foreach (var roundData in gameData)
             {
-                nextStep = new TaskCompletionSource<bool>();
-                string[] data = roundData.Split(';');
-                string round = data[0];
-
-                string question = data[1];
-                string _a = data[2];
-                string _b = data[3];
-                string _c = data[4];
-                string _d = data[5];
-                right = data[6];
-                selected = "";
-
-                label1.Text = "Раунд " + round;
-                textBox1.Visible = true;
-                textBox1.Text = question;
-
-                resetState();
-
-                button1.Text = _a;
-                button2.Text = _b;
-                button3.Text = _c;
-                button4.Text = _d;
-
-                while (!button5.Enabled)
+                if (roundData != null)
                 {
-                    if (button1.Checked || button2.Checked || button3.Checked || button4.Checked) {
-                        button5.Enabled = true;
+                    nextStep = new TaskCompletionSource<bool>();
+                    string[] data = roundData.Split(';');
+                    string round = data[0];
+
+                    string question = data[1];
+                    string _a = data[2];
+                    string _b = data[3];
+                    string _c = data[4];
+                    string _d = data[5];
+                    right = data[6];
+                    selected = "";
+
+                    label1.Text = "Раунд " + round;
+                    textBox1.Visible = true;
+                    textBox1.Text = question;
+
+                    resetState();
+
+                    button1.Text = _a;
+                    button2.Text = _b;
+                    button3.Text = _c;
+                    button4.Text = _d;
+
+                    while (!button5.Enabled)
+                    {
+                        if (button1.Checked || button2.Checked || button3.Checked || button4.Checked)
+                        {
+                            button5.Enabled = true;
+                        }
+                        await Task.Delay(100);
                     }
-                    await Task.Delay(100);
-                }
 
-                while (!button6.Visible)
-                {
-                    await Task.Delay(100);
+                    while (!button6.Visible)
+                    {
+                        await Task.Delay(100);
+                    }
+                    await nextStep.Task;
                 }
-                await nextStep.Task;
             }
 
             button6.Text = "Вопросы закончились, начать сначала?";
@@ -92,6 +96,20 @@ namespace wwtbam
                     gameData = File.ReadAllLines(openFileDialog.FileName, Encoding.UTF8);
 
                     MessageBox.Show("Файл успешно загружен!");
+                    if (gameData[0].StartsWith("Раунд"))
+                    {
+                        string[] dataNoHead = new string[gameData.Length];
+                        int i = 0;
+                        foreach (var item in gameData)
+                        {
+                            if (!item.StartsWith("Раунд"))
+                            {
+                                dataNoHead[i] = item;
+                                i++;
+                            }
+                        }
+                        gameData = dataNoHead;
+                    }
                 }
                 catch (Exception ex)
                 {

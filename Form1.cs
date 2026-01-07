@@ -20,17 +20,33 @@ namespace wwtbam
             Console.Out.Write("\nНачало игры\n");
             label1.Text = "Начало игры";
             textBox1.Visible = false;
+            // кнопки выбора ответа 
             button1.Visible = false;
             button2.Visible = false;
             button3.Visible = false;
             button4.Visible = false;
+            // кнопка подтверждения выбора 
             button5.Visible = false;
+            // кнопки с подсказками
+            button7.Visible = false;
+            button8.Visible = false;
+            button9.Visible = false;
+            button10.Visible = false;
+            button11.Visible = false;
+            button12.Visible = false;
+
             button0.Visible = true;
             button0.Text = "Выберите файл для начала игры";
         }
 
         private async Task Rounds(string[] gameData)
         {
+            button7.Visible = true;
+            button8.Visible = true;
+            button9.Visible = true;
+            button10.Visible = true;
+            button11.Visible = true;
+            button12.Visible = true;
             foreach (var roundData in gameData)
             {
                 if (roundData != null)
@@ -45,6 +61,7 @@ namespace wwtbam
                     string _c = data[4];
                     string _d = data[5];
                     right = data[6];
+                    fixRight();
                     selected = "";
 
                     label1.Text = "Раунд " + round;
@@ -92,7 +109,6 @@ namespace wwtbam
             {
                 try
                 {
-                    // Читаем строки из выбранного файла
                     gameData = File.ReadAllLines(openFileDialog.FileName, Encoding.UTF8);
 
                     MessageBox.Show("Файл успешно загружен!");
@@ -137,7 +153,7 @@ namespace wwtbam
             {
                 selected = "D";
             }
-            showRight(right, selected);
+            showRight(selected);
             button5.Visible = false;
             button6.Visible = true;
         }
@@ -148,37 +164,46 @@ namespace wwtbam
             button2.Checked = false;
             button3.Checked = false;
             button4.Checked = false;
+
+            button1.Enabled = true;
+            button2.Enabled = true;
+            button3.Enabled = true;
+            button4.Enabled = true;
+
             button5.Visible = false;
             button6.Visible = true;
             nextStep.TrySetResult(true);
         }
 
-        private void showRight(string right, string selected)
-        {
-            string fixedRight = "";
-            switch (right)
+        // унифицируем букафку для определения правильного ответа
+        private void fixRight() {
+            switch (this.right)
             {
                 case "A":
                 case "А":
-                    fixedRight = "A";
+                    this.right = "A";
                     break;
                 case "B":
                 case "Б":
-                    fixedRight = "B";
+                    this.right = "B";
                     break;
                 case "C":
                 case "В":
-                    fixedRight = "C";
+                    this.right = "C";
                     break;
                 case "D":
                 case "Г":
-                    fixedRight = "D";
+                    this.right = "D";
                     break;
                 default:
-                    fixedRight = right;
+                    this.right = right;
                     break;
             }
-            switch (fixedRight)
+        }
+        // подсвечиваем правильный ответ 
+        private void showRight(string selected)
+        {
+            switch (this.right)
             {
                 case "A":
                     button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -199,7 +224,7 @@ namespace wwtbam
                 default:
                     break;
             }
-            if (fixedRight != selected)
+            if (this.right != selected)
             {
                 switch (selected)
                 {
@@ -225,6 +250,7 @@ namespace wwtbam
             }
         }
 
+        // приводим все визуальные элементы к исходному состоянию
         private void resetState()
         {
             button1.Visible = true;
@@ -239,7 +265,6 @@ namespace wwtbam
 
             button5.Visible = true;
             button5.Enabled = false;
-            button5.Visible = true;
             button6.Visible = true;
             button0.Visible = false;
 
@@ -255,6 +280,99 @@ namespace wwtbam
 
         private void resetGame(object sender, EventArgs e) {
             Rounds(gameData);
+        }
+
+        private void remove2Answers()
+        {
+            string[] answers = new string[4];
+            answers[0] = "A";
+            answers[1] = "B";
+            answers[2] = "C";
+            answers[3] = "D";
+            // получаем индекс правильного ответа 
+            int rightIdx = Array.IndexOf(answers, right);
+            // Если правильный ответ 0, выключаем 1 и 2 (Батон идёт с + 1)
+            // Если правильный ответ 1, выключаем 2 и 3
+            // Если правильный ответ 2, выключаем 3 и 4
+            // Если правильный ответ 3, выключаем 1 и 4
+            switch (rightIdx) {
+                case 0:
+                    button2.Enabled = false;
+                    button3.Enabled = false;
+                    break;
+                case 1:
+                    button3.Enabled = false;
+                    button4.Enabled = false;
+                    break;
+                case 2:
+                    button4.Enabled = false;
+                    button1.Enabled = false;
+                    break;
+                case 3:
+                    button2.Enabled = false;
+                    button1.Enabled = false;
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void button7_MouseDown(object sender, MouseEventArgs e)
+        {
+            button7.BackgroundImage = Properties.Resources.pplHelpDisabled;
+            button7.Enabled = false;
+        }
+        private void button7_MouseUp(object sender, MouseEventArgs e)
+        {
+            button7.BackgroundImage = Properties.Resources.pplHelpEnabled;
+        }
+
+        private void button8_MouseDown(object sender, MouseEventArgs e)
+        {
+            button8.BackgroundImage = Properties.Resources.pplHelpDisabled;
+            button8.Enabled = false;
+        }
+        private void button8_MouseUp(object sender, MouseEventArgs e)
+        {
+            button8.BackgroundImage = Properties.Resources.pplHelpEnabled;
+        }
+
+        private void button9_MouseDown(object sender, MouseEventArgs e)
+        {
+            button9.BackgroundImage = Properties.Resources.phoneDisabled;
+            button9.Enabled = false;
+        }
+        private void button9_MouseUp(object sender, MouseEventArgs e)
+        {
+            button9.BackgroundImage = Properties.Resources.phoneEnabled;
+        }
+
+        private void button10_MouseDown(object sender, MouseEventArgs e)
+        {
+            button10.BackgroundImage = Properties.Resources.pictureDisabled;
+            button10.Enabled = false;
+        }
+        private void button10_MouseUp(object sender, MouseEventArgs e)
+        {
+            button10.BackgroundImage = Properties.Resources.pictureEnabled;
+        }
+
+        private void button11_MouseDown(object sender, MouseEventArgs e)
+        {
+            button11.BackgroundImage = Properties.Resources.lifeDisabled;
+            button11.Enabled = false;
+        }
+        private void button11_MouseUp(object sender, MouseEventArgs e)
+        {
+            button11.BackgroundImage = Properties.Resources.lifeEnabled;
+        }
+
+        private void button12_MouseDown(object sender, MouseEventArgs e)
+        {
+            button12.BackgroundImage = Properties.Resources._50Disabled;
+            button12.Enabled = false;
+            remove2Answers();
+            // button12.BackgroundImage = Properties.Resources._50Enabled;
         }
     }
 }

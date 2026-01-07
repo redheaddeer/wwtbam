@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,39 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pplHelpEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pplHelpDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\phoneEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\phoneDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pictureEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pictureDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\lifeDisabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\lifeEnabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\50Disabled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\50Enabled.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

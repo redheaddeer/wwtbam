@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,8 @@ namespace wwtbam
         public Form1()
         {
             InitializeComponent();
-            Console.Out.Write("\nНачало игры\n");
             label1.Text = "Начало игры";
-            textBox1.Visible = false;
+            label2.Visible = false;
             // кнопки выбора ответа 
             button1.Visible = false;
             button2.Visible = false;
@@ -41,6 +41,7 @@ namespace wwtbam
 
         private async Task Rounds(string[] gameData)
         {
+            this.BackgroundImage = global::wwtbam.Properties.Resources.background2;
             button7.Visible = true;
             button8.Visible = true;
             button9.Visible = true;
@@ -65,8 +66,8 @@ namespace wwtbam
                     selected = "";
 
                     label1.Text = "Раунд " + round;
-                    textBox1.Visible = true;
-                    textBox1.Text = question;
+                    label2.Visible = true;
+                    label2.Text = question;
 
                     resetState();
 
@@ -177,33 +178,32 @@ namespace wwtbam
 
         // унифицируем букафку для определения правильного ответа
         private void fixRight() {
-            switch (this.right)
+            switch (right)
             {
                 case "A":
                 case "А":
-                    this.right = "A";
+                    right = "A";
                     break;
                 case "B":
                 case "Б":
-                    this.right = "B";
+                    right = "B";
                     break;
                 case "C":
                 case "В":
-                    this.right = "C";
+                    right = "C";
                     break;
                 case "D":
                 case "Г":
-                    this.right = "D";
+                    right = "D";
                     break;
                 default:
-                    this.right = right;
                     break;
             }
         }
         // подсвечиваем правильный ответ 
         private void showRight(string selected)
         {
-            switch (this.right)
+            switch (right)
             {
                 case "A":
                     button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -224,7 +224,7 @@ namespace wwtbam
                 default:
                     break;
             }
-            if (this.right != selected)
+            if (right != selected)
             {
                 switch (selected)
                 {
@@ -297,20 +297,20 @@ namespace wwtbam
             // Если правильный ответ 3, выключаем 1 и 4
             switch (rightIdx) {
                 case 0:
-                    button2.Enabled = false;
-                    button3.Enabled = false;
+                    button2.Visible = false;
+                    button3.Visible = false;
                     break;
                 case 1:
-                    button3.Enabled = false;
-                    button4.Enabled = false;
+                    button3.Visible = false;
+                    button4.Visible = false;
                     break;
                 case 2:
-                    button4.Enabled = false;
-                    button1.Enabled = false;
+                    button4.Visible = false;
+                    button1.Visible = false;
                     break;
                 case 3:
-                    button2.Enabled = false;
-                    button1.Enabled = false;
+                    button2.Visible = false;
+                    button1.Visible = false;
                     break;
                 default:
                     break;
@@ -374,5 +374,27 @@ namespace wwtbam
             remove2Answers();
             // button12.BackgroundImage = Properties.Resources._50Enabled;
         }
+
+
+        private void Button_MouseEnter(object sender, EventArgs e)
+        {
+            ((Button)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void Button_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void RadioButton_MouseEnter(object sender, EventArgs e)
+        {
+            ((RadioButton)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
+        private void RadioButton_MouseLeave(object sender, EventArgs e)
+        {
+            ((RadioButton)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+        }
+
     }
 }

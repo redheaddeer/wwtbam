@@ -113,5 +113,29 @@
   <ItemGroup>
     <None Include="resources\50Enabled.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\background1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\acceptAnswer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\getFile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\nextQuestion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\startAgain.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\fon1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\fields.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

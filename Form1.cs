@@ -129,7 +129,7 @@ namespace wwtbam
                     button3.Text = _c;
                     button3.BackgroundImage = Properties.Resources.normalAnswer;
                     await Task.Delay(1000);
-
+                    
                     button4.Text = _d;
                     button4.BackgroundImage = Properties.Resources.normalAnswer;
                     await Task.Delay(1000);
@@ -151,9 +151,7 @@ namespace wwtbam
                 }
             }
 
-            button6.Text = "Вопросы закончились, начать сначала?";
-            button6.Enabled = true;
-            button6.Click += new System.EventHandler(resetGame);
+            MessageBox.Show("А всё... А больше делать надо было...");
         }
 
         private void button0_Click(object sender, EventArgs e)
@@ -235,8 +233,7 @@ namespace wwtbam
         }
 
         // унифицируем букафку для определения правильного ответа
-        private void fixRight()
-        {
+        private void fixRight() {
             switch (right)
             {
                 case "A":
@@ -347,8 +344,7 @@ namespace wwtbam
             button4.BackgroundImage = Properties.Resources.emptyField;
         }
 
-        private void resetGame(object sender, EventArgs e)
-        {
+        private void resetGame(object sender, EventArgs e) {
             Rounds(gameData);
         }
 
@@ -365,8 +361,7 @@ namespace wwtbam
             // Если правильный ответ 1, выключаем 2 и 3
             // Если правильный ответ 2, выключаем 3 и 4
             // Если правильный ответ 3, выключаем 1 и 4
-            switch (rightIdx)
-            {
+            switch (rightIdx) {
                 case 0:
                     button2.Text = "";
                     button2.BackgroundImage = Properties.Resources.emptyField;
@@ -490,9 +485,12 @@ namespace wwtbam
             if (button1.Checked)
             {
                 button1.BackgroundImage = Properties.Resources.pickedAnswer;
-                button2.BackgroundImage = Properties.Resources.normalAnswer;
-                button3.BackgroundImage = Properties.Resources.normalAnswer;
-                button4.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button2.Enabled)
+                    button2.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button3.Enabled)
+                    button3.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button4.Enabled)
+                    button4.BackgroundImage = Properties.Resources.normalAnswer;
             }
         }
         private void button2_CheckedChanged(object sender, EventArgs e)
@@ -503,9 +501,13 @@ namespace wwtbam
             if (button2.Checked)
             {
                 button2.BackgroundImage = Properties.Resources.pickedAnswer;
-                button1.BackgroundImage = Properties.Resources.normalAnswer;
-                button3.BackgroundImage = Properties.Resources.normalAnswer;
-                button4.BackgroundImage = Properties.Resources.normalAnswer;
+
+                if (button1.Enabled)
+                    button1.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button3.Enabled)
+                    button3.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button4.Enabled)
+                    button4.BackgroundImage = Properties.Resources.normalAnswer;
 
             }
         }
@@ -517,9 +519,13 @@ namespace wwtbam
             if (button3.Checked)
             {
                 button3.BackgroundImage = Properties.Resources.pickedAnswer;
-                button1.BackgroundImage = Properties.Resources.normalAnswer;
-                button2.BackgroundImage = Properties.Resources.normalAnswer;
-                button4.BackgroundImage = Properties.Resources.normalAnswer;
+
+                if (button1.Enabled)
+                    button1.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button2.Enabled)
+                    button2.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button4.Enabled)
+                    button4.BackgroundImage = Properties.Resources.normalAnswer;
             }
         }
         private void button4_CheckedChanged(object sender, EventArgs e)
@@ -530,9 +536,13 @@ namespace wwtbam
             if (button4.Checked)
             {
                 button4.BackgroundImage = Properties.Resources.pickedAnswer;
-                button1.BackgroundImage = Properties.Resources.normalAnswer;
-                button3.BackgroundImage = Properties.Resources.normalAnswer;
-                button2.BackgroundImage = Properties.Resources.normalAnswer;
+
+                if (button1.Enabled)
+                    button1.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button3.Enabled)
+                    button3.BackgroundImage = Properties.Resources.normalAnswer;
+                if (button2.Enabled)
+                    button2.BackgroundImage = Properties.Resources.normalAnswer;
             }
         }
     }

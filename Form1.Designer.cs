@@ -40,6 +40,7 @@ namespace wwtbam
             this.button4 = new System.Windows.Forms.RadioButton();
             this.button5 = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button12 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -48,6 +49,17 @@ namespace wwtbam
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox(); // ввод вопроса 
+            this.textBox2 = new System.Windows.Forms.TextBox(); // ответ A 
+            this.textBox3 = new System.Windows.Forms.TextBox(); // B
+            this.textBox4 = new System.Windows.Forms.TextBox(); // C
+            this.textBox5 = new System.Windows.Forms.TextBox(); // D
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -55,6 +67,7 @@ namespace wwtbam
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(42, 41);
@@ -65,9 +78,6 @@ namespace wwtbam
             this.label1.TabIndex = 6;
             this.label1.Text = "Начало игры";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label1.BackColor = Color.Transparent;
-            this.label1.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
-            this.label1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             // 
             // button1
             // 
@@ -213,8 +223,8 @@ namespace wwtbam
             this.button0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button0.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button0.ForeColor = System.Drawing.Color.Pink;
-            this.button0.Location = new System.Drawing.Point(215, 242);
+            this.button0.ForeColor = System.Drawing.Color.Transparent;
+            this.button0.Location = new System.Drawing.Point(215, 200);
             this.button0.MaximumSize = new System.Drawing.Size(500, 60);
             this.button0.MinimumSize = new System.Drawing.Size(500, 60);
             this.button0.Name = "button0";
@@ -224,6 +234,29 @@ namespace wwtbam
             this.button0.Click += new System.EventHandler(this.button0_Click);
             this.button0.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
             this.button0.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button13
+            // 
+            this.button13.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.button13.BackColor = System.Drawing.Color.Transparent;
+            this.button13.BackgroundImage = global::wwtbam.Properties.Resources.createQuestions;
+            this.button13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button13.FlatAppearance.BorderSize = 0;
+            this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button13.ForeColor = System.Drawing.Color.Transparent;
+            this.button13.Location = new System.Drawing.Point(260, 298);
+            this.button13.MaximumSize = new System.Drawing.Size(400, 60);
+            this.button13.MinimumSize = new System.Drawing.Size(400, 60);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(400, 60);
+            this.button13.TabIndex = 16;
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button13.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button13.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // button6
             // 
@@ -385,6 +418,118 @@ namespace wwtbam
             this.label2.TabIndex = 15;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(305, 90);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox1.Size = new System.Drawing.Size(300, 40);
+            this.textBox1.TabIndex = 23;
+            this.textBox1.Text = "Введите вопрос";
+            this.textBox1.Visible = false;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(205, 150);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox2.Size = new System.Drawing.Size(200, 30);
+            this.textBox2.TabIndex = 24;
+            this.textBox2.Text = "Введите ответ A";
+            this.textBox2.Visible = false;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(205, 200);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox3.Size = new System.Drawing.Size(200, 30);
+            this.textBox3.TabIndex = 25;
+            this.textBox3.Text = "Введите ответ B";
+            this.textBox3.Visible = false;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(205, 250);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox4.Size = new System.Drawing.Size(200, 30);
+            this.textBox4.TabIndex = 26;
+            this.textBox4.Text = "Введите ответ C";
+            this.textBox4.Visible = false;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(205, 300);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBox5.Size = new System.Drawing.Size(200, 30);
+            this.textBox5.TabIndex = 27;
+            this.textBox5.Text = "Введите ответ D";
+            this.textBox5.Visible = false;
+            // 
+            // radioButton1
+            // 
+            this.radioButton1.Location = new System.Drawing.Point(415, 150);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton1.Size = new System.Drawing.Size(28, 28);
+            this.radioButton1.TabIndex = 19;
+            this.radioButton1.Visible = false;
+            // 
+            // radioButton2
+            // 
+            this.radioButton2.Location = new System.Drawing.Point(415, 200);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton2.Size = new System.Drawing.Size(28, 28);
+            this.radioButton2.TabIndex = 20;
+            this.radioButton2.Visible = false;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.Location = new System.Drawing.Point(415, 250);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton3.Size = new System.Drawing.Size(28, 28);
+            this.radioButton3.TabIndex = 21;
+            this.radioButton3.Visible = false;
+            // 
+            // radioButton4
+            // 
+            this.radioButton4.Location = new System.Drawing.Point(415, 300);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.BackColor = System.Drawing.Color.Transparent;
+            this.radioButton4.Size = new System.Drawing.Size(28, 28);
+            this.radioButton4.TabIndex = 22;
+            this.radioButton4.Visible = false;
+            // 
+            // button14
+            // 
+            this.button14.Location = new System.Drawing.Point(200, 400);
+            this.button14.Name = "button14";
+            this.button14.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button14.Size = new System.Drawing.Size(200, 40);
+            this.button14.TabIndex = 17;
+            this.button14.Text = "Добавить вопрос";
+            this.button14.Visible = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            this.button14.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button14.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
+            // button15
+            // 
+            this.button15.Location = new System.Drawing.Point(600, 400);
+            this.button15.Name = "button15";
+            this.button15.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button15.Size = new System.Drawing.Size(200, 40);
+            this.button15.TabIndex = 18;
+            this.button15.Text = "Завершить список";
+            this.button15.Visible = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
+            this.button15.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.button15.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -402,16 +547,27 @@ namespace wwtbam
             this.Controls.Add(this.button7);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button0);
+            this.Controls.Add(this.button13);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button5);
             this.Controls.Add(this.button6);
+            this.Controls.Add(this.button14);
+            this.Controls.Add(this.button15);
+            this.Controls.Add(this.radioButton1);
+            this.Controls.Add(this.radioButton2);
+            this.Controls.Add(this.radioButton3);
+            this.Controls.Add(this.radioButton4);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox5);
             this.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Sizable;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(910, 500);
             this.Name = "Form1";
@@ -437,8 +593,22 @@ namespace wwtbam
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+
+
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
     }
-    }
+}
 

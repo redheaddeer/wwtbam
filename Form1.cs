@@ -4,6 +4,8 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace wwtbam
 {
@@ -14,7 +16,8 @@ namespace wwtbam
 
         private string right = "";
         private string selected = "";
-
+        string questions = "";
+        int questionsCount = 1;
         public Form1()
         {
             InitializeComponent();
@@ -48,6 +51,8 @@ namespace wwtbam
 
             label1.BackColor = Color.Transparent;
             label1.BackgroundImage = Properties.Resources.fon1;
+
+            button13.Visible = false;
 
             button7.Visible = true;
             button8.Visible = true;
@@ -129,7 +134,7 @@ namespace wwtbam
                     button3.Text = _c;
                     button3.BackgroundImage = Properties.Resources.normalAnswer;
                     await Task.Delay(1000);
-                    
+
                     button4.Text = _d;
                     button4.BackgroundImage = Properties.Resources.normalAnswer;
                     await Task.Delay(1000);
@@ -158,8 +163,8 @@ namespace wwtbam
         {
             OpenFileDialog openFileDialog = new OpenFileDialog
             {
-                Filter = "CSV файлы (*.csv)|*.csv|Все файлы (*.*)|*.*",
-                Title = "Выберите файл CSV"
+                Filter = "Normal text file (*.txt)|*.txt|Все файлы (*.*)|*.*",
+                Title = "Выберите файл TXT"
             };
 
             if (openFileDialog.ShowDialog() == DialogResult.OK)
@@ -233,7 +238,8 @@ namespace wwtbam
         }
 
         // унифицируем букафку для определения правильного ответа
-        private void fixRight() {
+        private void fixRight()
+        {
             switch (right)
             {
                 case "A":
@@ -344,7 +350,8 @@ namespace wwtbam
             button4.BackgroundImage = Properties.Resources.emptyField;
         }
 
-        private void resetGame(object sender, EventArgs e) {
+        private void resetGame(object sender, EventArgs e)
+        {
             Rounds(gameData);
         }
 
@@ -361,7 +368,8 @@ namespace wwtbam
             // Если правильный ответ 1, выключаем 2 и 3
             // Если правильный ответ 2, выключаем 3 и 4
             // Если правильный ответ 3, выключаем 1 и 4
-            switch (rightIdx) {
+            switch (rightIdx)
+            {
                 case 0:
                     button2.Text = "";
                     button2.BackgroundImage = Properties.Resources.emptyField;
@@ -460,22 +468,22 @@ namespace wwtbam
 
         private void Button_MouseEnter(object sender, EventArgs e)
         {
-            ((Button)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+            ((System.Windows.Forms.Button)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
         private void Button_MouseLeave(object sender, EventArgs e)
         {
-            ((Button)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+            ((System.Windows.Forms.Button)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
         private void RadioButton_MouseEnter(object sender, EventArgs e)
         {
-            ((RadioButton)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+            ((System.Windows.Forms.RadioButton)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
         private void RadioButton_MouseLeave(object sender, EventArgs e)
         {
-            ((RadioButton)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
+            ((System.Windows.Forms.RadioButton)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
         private void button1_CheckedChanged(object sender, EventArgs e)
         {
@@ -544,6 +552,116 @@ namespace wwtbam
                 if (button2.Enabled)
                     button2.BackgroundImage = Properties.Resources.normalAnswer;
             }
+        }
+
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+
+            // Вырубаем видимость всех стартовых объектов
+            label1.Visible = false;
+            button0.Visible = false;
+            button13.Visible = false;
+
+            // Выводим на экран наши спрятанные по умолчанию поля ввода
+            textBox1.Visible = true; // это вопрос
+            textBox2.Visible = true; // это ответ A
+            textBox3.Visible = true; // это ответ B
+            textBox4.Visible = true; // это ответ C
+            textBox5.Visible = true; // это ответ D
+            radioButton1.Visible = true; // это чтобы определить вариант ответа A как правильный 
+            radioButton2.Visible = true; // это чтобы определить вариант ответа B как правильный 
+            radioButton3.Visible = true; // это чтобы определить вариант ответа C как правильный 
+            radioButton4.Visible = true; // это чтобы определить вариант ответа D как правильный 
+            button14.Visible = true; // это чтобы добавить вариант в файл 
+            button14.Enabled = false; // это чтобы добавить вариант в файл 
+            button15.Visible = true; // это чтобы закончить собирать файл
+
+            checkReadyQuestion();
+        }
+
+        private async Task checkReadyQuestion() {
+            while (!button14.Enabled)
+            {
+                if (radioButton1.Checked || radioButton2.Checked || radioButton3.Checked || radioButton4.Checked)
+                {
+                    button14.Enabled = true;
+                }
+                await Task.Delay(100);
+            }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            string rightAnswer = "";
+            if (radioButton1.Checked) rightAnswer = "A";
+            if (radioButton2.Checked) rightAnswer = "B";
+            if (radioButton3.Checked) rightAnswer = "C";
+            if (radioButton4.Checked) rightAnswer = "D";
+
+            questions += questionsCount + ";" + textBox1.Text + ";" + textBox2.Text + ";" + textBox3.Text + ";" + textBox4.Text + ";" + textBox5.Text + ";" + rightAnswer + "\n";
+            questionsCount++;
+
+            button14.Enabled = false;
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            radioButton3.Checked = false;
+            radioButton4.Checked = false;
+            this.textBox1.Text = "Введите вопрос";
+            this.textBox2.Text = "Введите ответ A";
+            this.textBox3.Text = "Введите ответ B";
+            this.textBox4.Text = "Введите ответ C";
+            this.textBox5.Text = "Введите ответ D";
+
+            checkReadyQuestion();
+        }
+        private void button15_Click(object sender, EventArgs e)
+        {
+            SaveFileDialog saveDialog = new SaveFileDialog();
+
+            saveDialog.Filter = "Текстовые файлы (*.txt)|*.txt|Все файлы (*.*)|*.*";
+            saveDialog.Title = "Сохраните файл";
+            saveDialog.DefaultExt = ".txt";
+            saveDialog.AddExtension = true;
+
+            if (saveDialog.ShowDialog() == DialogResult.OK)
+            {
+                try
+                {
+                    using (StreamWriter sw = new StreamWriter(saveDialog.FileName))
+                    {
+                        sw.Write(questions);
+                    }
+
+                    MessageBox.Show("Файл успешно сохранён.", "Сообщение", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Ошибка при сохранении файла: {ex.Message}", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+
+            // Прячем поля ввода 
+            textBox1.Visible = false;
+            textBox2.Visible = false;
+            textBox3.Visible = false;
+            textBox4.Visible = false;
+            textBox5.Visible = false;
+            radioButton1.Visible = false;
+            radioButton2.Visible = false;
+            radioButton3.Visible = false;
+            radioButton4.Visible = false;
+            button14.Visible = false;
+            button15.Visible = false;
+
+            // очищаем список вопросов в переменной, вдруг надо будет сделать несколько файлов за один заход?
+            questions = "";
+            questionsCount = 1;
+
+            // Возввращаем видимость всех стартовых объектов
+            label1.Visible = true;
+            button0.Visible = true;
+            button13.Visible = true;
         }
     }
 }

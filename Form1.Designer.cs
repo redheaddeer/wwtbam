@@ -93,6 +93,7 @@ namespace wwtbam
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button1.UseVisualStyleBackColor = false;
             this.button1.CheckedChanged += new System.EventHandler(this.button1_CheckedChanged);
+            this.button1.Click += new System.EventHandler(this.button1_CheckedChanged);
             this.button1.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 
@@ -120,6 +121,7 @@ namespace wwtbam
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.CheckedChanged += new System.EventHandler(this.button2_CheckedChanged);
+            this.button2.Click += new System.EventHandler(this.button2_CheckedChanged);
             this.button2.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button2.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 
@@ -146,6 +148,7 @@ namespace wwtbam
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.CheckedChanged += new System.EventHandler(this.button3_CheckedChanged);
+            this.button3.Click += new System.EventHandler(this.button3_CheckedChanged);
             this.button3.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button3.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 
@@ -172,6 +175,7 @@ namespace wwtbam
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.CheckedChanged += new System.EventHandler(this.button4_CheckedChanged);
+            this.button4.Click += new System.EventHandler(this.button4_CheckedChanged);
             this.button4.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 

@@ -36,22 +36,62 @@ namespace wwtbam
             button12.Visible = false;
 
             button0.Visible = true;
-            button0.Text = "Выберите файл для начала игры";
+            button0.BackColor = Color.Transparent;
+            button0.BackgroundImage = global::wwtbam.Properties.Resources.getFile;
         }
 
         private async Task Rounds(string[] gameData)
         {
-            this.BackgroundImage = global::wwtbam.Properties.Resources.background2;
+
             button7.Visible = true;
             button8.Visible = true;
             button9.Visible = true;
             button10.Visible = true;
             button11.Visible = true;
             button12.Visible = true;
+
+            button1.Appearance = Appearance.Button;
+            button1.BackColor = Color.Transparent;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.TabStop = false;
+
+            button2.Appearance = Appearance.Button;
+            button2.BackColor = Color.Transparent;
+            button2.FlatStyle = FlatStyle.Flat;
+            button2.FlatAppearance.BorderSize = 0;
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.TabStop = false;
+
+            button3.Appearance = Appearance.Button;
+            button3.BackColor = Color.Transparent;
+            button3.FlatStyle = FlatStyle.Flat;
+            button3.FlatAppearance.BorderSize = 0;
+            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button3.TabStop = false;
+
+            button4.Appearance = Appearance.Button;
+            button4.BackColor = Color.Transparent;
+            button4.FlatStyle = FlatStyle.Flat;
+            button4.FlatAppearance.BorderSize = 0;
+            button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button4.TabStop = false;
+
+            // какая-то мистика происходит: фон для лейбла то и дело пропадает из класса, который генерирует конструктор сам, поэтому выношу сюда дубль присвоения фона
+            label2.BackgroundImage = global::wwtbam.Properties.Resources.backQuestion;
+
+            // дальше уже начинается перебор вопросов, поэтому всё происходящее в рамках рануда должно регулироваться изнутри этого цикла
             foreach (var roundData in gameData)
             {
                 if (roundData != null)
                 {
+                    resetState();
+
                     nextStep = new TaskCompletionSource<bool>();
                     string[] data = roundData.Split(';');
                     string round = data[0];
@@ -65,16 +105,28 @@ namespace wwtbam
                     fixRight();
                     selected = "";
 
+
                     label1.Text = "Раунд " + round;
                     label2.Visible = true;
                     label2.Text = question;
 
-                    resetState();
+                    await Task.Delay(2000);
 
                     button1.Text = _a;
+                    button1.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                    await Task.Delay(1000);
+
                     button2.Text = _b;
+                    button2.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                    await Task.Delay(1000);
+
                     button3.Text = _c;
+                    button3.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                    await Task.Delay(1000);
+                    
                     button4.Text = _d;
+                    button4.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                    await Task.Delay(1000);
 
                     while (!button5.Enabled)
                     {
@@ -207,19 +259,19 @@ namespace wwtbam
             {
                 case "A":
                     button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    button1.ForeColor = System.Drawing.Color.Green;
+                    button1.BackgroundImage = global::wwtbam.Properties.Resources.goodAnswer;
                     break;
                 case "B":
                     button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    button2.ForeColor = System.Drawing.Color.Green;
+                    button2.BackgroundImage = global::wwtbam.Properties.Resources.goodAnswer;
                     break;
                 case "C":
                     button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    button3.ForeColor = System.Drawing.Color.Green;
+                    button3.BackgroundImage = global::wwtbam.Properties.Resources.goodAnswer;
                     break;
                 case "D":
                     button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                    button4.ForeColor = System.Drawing.Color.Green;
+                    button4.BackgroundImage = global::wwtbam.Properties.Resources.goodAnswer;
                     break;
                 default:
                     break;
@@ -230,19 +282,19 @@ namespace wwtbam
                 {
                     case "A":
                         button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        button1.ForeColor = System.Drawing.Color.Red;
+                        button1.BackgroundImage = global::wwtbam.Properties.Resources.badAnswer;
                         break;
                     case "B":
                         button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        button2.ForeColor = System.Drawing.Color.Red;
+                        button2.BackgroundImage = global::wwtbam.Properties.Resources.badAnswer;
                         break;
                     case "C":
                         button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        button3.ForeColor = System.Drawing.Color.Red;
+                        button3.BackgroundImage = global::wwtbam.Properties.Resources.badAnswer;
                         break;
                     case "D":
                         button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-                        button4.ForeColor = System.Drawing.Color.Red;
+                        button4.BackgroundImage = global::wwtbam.Properties.Resources.badAnswer;
                         break;
                     default:
                         break;
@@ -268,6 +320,11 @@ namespace wwtbam
             button6.Visible = true;
             button0.Visible = false;
 
+            button1.Text = "";
+            button2.Text = "";
+            button3.Text = "";
+            button4.Text = "";
+
             button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             button1.ForeColor = System.Drawing.Color.Black;
             button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -276,6 +333,11 @@ namespace wwtbam
             button3.ForeColor = System.Drawing.Color.Black;
             button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             button4.ForeColor = System.Drawing.Color.Black;
+
+            button1.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
+            button2.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
+            button3.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
+            button4.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
         }
 
         private void resetGame(object sender, EventArgs e) {
@@ -396,5 +458,57 @@ namespace wwtbam
             ((RadioButton)sender).FlatAppearance.MouseOverBackColor = Color.Transparent;
         }
 
+        private void button1_CheckedChanged(object sender, EventArgs e)
+        {
+            button1.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button1.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button1.BackColor = Color.Transparent;
+            if (button1.Checked)
+            {
+                button1.BackgroundImage = global::wwtbam.Properties.Resources.pickedAnswer;
+                button2.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button3.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button4.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+            }
+        }
+        private void button2_CheckedChanged(object sender, EventArgs e)
+        {
+            button2.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button2.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button2.BackColor = Color.Transparent;
+            if (button2.Checked)
+            {
+                button1.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button2.BackgroundImage = global::wwtbam.Properties.Resources.pickedAnswer;
+                button3.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button4.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+            }
+        }
+        private void button3_CheckedChanged(object sender, EventArgs e)
+        {
+            button3.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button3.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button3.BackColor = Color.Transparent;
+            if (button3.Checked)
+            {
+                button1.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button2.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button3.BackgroundImage = global::wwtbam.Properties.Resources.pickedAnswer;
+                button4.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+            }
+        }
+        private void button4_CheckedChanged(object sender, EventArgs e)
+        {
+            button4.FlatAppearance.MouseOverBackColor = Color.Transparent;
+            button4.FlatAppearance.MouseDownBackColor = Color.Transparent;
+            button4.BackColor = Color.Transparent;
+            if (button4.Checked)
+            {
+                button1.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button2.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button3.BackgroundImage = global::wwtbam.Properties.Resources.normalAnswer;
+                button4.BackgroundImage = global::wwtbam.Properties.Resources.pickedAnswer;
+            }
+        }
     }
 }

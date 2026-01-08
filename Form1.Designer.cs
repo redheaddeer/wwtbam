@@ -66,10 +66,13 @@ namespace wwtbam
             this.button1.Appearance = System.Windows.Forms.Appearance.Button;
             this.button1.AutoSize = true;
             this.button1.BackColor = System.Drawing.Color.Transparent;
-            this.button1.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
+            this.button1.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
             this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button1.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button1.Location = new System.Drawing.Point(46, 285);
@@ -80,6 +83,7 @@ namespace wwtbam
             this.button1.TabIndex = 0;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.CheckedChanged += new System.EventHandler(this.button1_CheckedChanged);
             this.button1.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button1.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 
@@ -88,10 +92,13 @@ namespace wwtbam
             this.button2.Appearance = System.Windows.Forms.Appearance.Button;
             this.button2.AutoSize = true;
             this.button2.BackColor = System.Drawing.Color.Transparent;
-            this.button2.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
+            this.button2.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
             this.button2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button2.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button2.Location = new System.Drawing.Point(46, 364);
@@ -102,6 +109,7 @@ namespace wwtbam
             this.button2.TabIndex = 1;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.CheckedChanged += new System.EventHandler(this.button2_CheckedChanged);
             this.button2.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button2.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 
@@ -109,10 +117,13 @@ namespace wwtbam
             // 
             this.button3.Appearance = System.Windows.Forms.Appearance.Button;
             this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
+            this.button3.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
             this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button3.CheckAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button3.FlatAppearance.BorderSize = 0;
+            this.button3.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button3.Location = new System.Drawing.Point(495, 285);
@@ -123,6 +134,7 @@ namespace wwtbam
             this.button3.TabIndex = 2;
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.CheckedChanged += new System.EventHandler(this.button3_CheckedChanged);
             this.button3.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button3.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 
@@ -131,9 +143,12 @@ namespace wwtbam
             this.button4.Appearance = System.Windows.Forms.Appearance.Button;
             this.button4.AutoSize = true;
             this.button4.BackColor = System.Drawing.Color.Transparent;
-            this.button4.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
+            this.button4.BackgroundImage = global::wwtbam.Properties.Resources.emptyField;
             this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.button4.FlatAppearance.BorderSize = 0;
+            this.button4.FlatAppearance.CheckedBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button4.Location = new System.Drawing.Point(495, 364);
@@ -144,6 +159,7 @@ namespace wwtbam
             this.button4.TabIndex = 3;
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button4.UseVisualStyleBackColor = true;
+            this.button4.CheckedChanged += new System.EventHandler(this.button4_CheckedChanged);
             this.button4.MouseEnter += new System.EventHandler(this.RadioButton_MouseEnter);
             this.button4.MouseLeave += new System.EventHandler(this.RadioButton_MouseLeave);
             // 
@@ -154,6 +170,8 @@ namespace wwtbam
             this.button5.BackgroundImage = global::wwtbam.Properties.Resources.acceptAnswer;
             this.button5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button5.FlatAppearance.BorderSize = 0;
+            this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button5.Location = new System.Drawing.Point(45, 420);
@@ -168,16 +186,18 @@ namespace wwtbam
             // button0
             // 
             this.button0.BackColor = System.Drawing.Color.Transparent;
-            this.button0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.button0.BackgroundImage = global::wwtbam.Properties.Resources.getFile;
+            this.button0.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.button0.FlatAppearance.BorderSize = 0;
+            this.button0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button0.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button0.ForeColor = System.Drawing.Color.Pink;
-            this.button0.Location = new System.Drawing.Point(45, 244);
+            this.button0.Location = new System.Drawing.Point(215, 242);
             this.button0.Name = "button0";
-            this.button0.Size = new System.Drawing.Size(800, 30);
+            this.button0.Size = new System.Drawing.Size(500, 60);
             this.button0.TabIndex = 7;
-            this.button0.Text = "Выбор файла для начала игры";
             this.button0.UseVisualStyleBackColor = false;
             this.button0.Click += new System.EventHandler(this.button0_Click);
             this.button0.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
@@ -186,12 +206,18 @@ namespace wwtbam
             // button6
             // 
             this.button6.AutoSize = true;
+            this.button6.BackColor = System.Drawing.Color.Transparent;
+            this.button6.BackgroundImage = global::wwtbam.Properties.Resources.nextQuestion;
+            this.button6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.button6.FlatAppearance.BorderSize = 0;
+            this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(45, 420);
+            this.button6.Location = new System.Drawing.Point(197, 409);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(800, 34);
+            this.button6.Size = new System.Drawing.Size(500, 45);
             this.button6.TabIndex = 8;
-            this.button6.Text = "Перейти к следующему вопросу";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Visible = false;
             this.button6.Click += new System.EventHandler(this.button6_Click);
@@ -304,7 +330,6 @@ namespace wwtbam
             // 
             this.label2.AutoSize = true;
             this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
             this.label2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

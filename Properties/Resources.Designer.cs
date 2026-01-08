@@ -113,6 +113,36 @@ namespace wwtbam.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backQuestion {
+            get {
+                object obj = ResourceManager.GetObject("backQuestion", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap badAnswer {
+            get {
+                object obj = ResourceManager.GetObject("badAnswer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap emptyField {
+            get {
+                object obj = ResourceManager.GetObject("emptyField", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap fields {
             get {
                 object obj = ResourceManager.GetObject("fields", resourceCulture);
@@ -136,6 +166,16 @@ namespace wwtbam.Properties {
         internal static System.Drawing.Bitmap getFile {
             get {
                 object obj = ResourceManager.GetObject("getFile", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap goodAnswer {
+            get {
+                object obj = ResourceManager.GetObject("goodAnswer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,6 +213,16 @@ namespace wwtbam.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap normalAnswer {
+            get {
+                object obj = ResourceManager.GetObject("normalAnswer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap phoneDisabled {
             get {
                 object obj = ResourceManager.GetObject("phoneDisabled", resourceCulture);
@@ -186,6 +236,16 @@ namespace wwtbam.Properties {
         internal static System.Drawing.Bitmap phoneEnabled {
             get {
                 object obj = ResourceManager.GetObject("phoneEnabled", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap pickedAnswer {
+            get {
+                object obj = ResourceManager.GetObject("pickedAnswer", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

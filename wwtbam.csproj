@@ -137,5 +137,23 @@
   <ItemGroup>
     <None Include="resources\fields.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\emptyField.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\badAnswer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\goodAnswer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\pickedAnswer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\normalAnswer.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\backQuestion.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

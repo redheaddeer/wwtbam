@@ -38,10 +38,16 @@ namespace wwtbam
             button0.Visible = true;
             button0.BackColor = Color.Transparent;
             button0.BackgroundImage = global::wwtbam.Properties.Resources.getFile;
+
+            label1.BackColor = Color.Transparent;
+            label1.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
         }
 
         private async Task Rounds(string[] gameData)
         {
+
+            label1.BackColor = Color.Transparent;
+            label1.BackgroundImage = global::wwtbam.Properties.Resources.fon1;
 
             button7.Visible = true;
             button8.Visible = true;

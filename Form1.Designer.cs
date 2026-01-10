@@ -49,11 +49,11 @@ namespace wwtbam
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox(); // ввод вопроса 
-            this.textBox2 = new System.Windows.Forms.TextBox(); // ответ A 
-            this.textBox3 = new System.Windows.Forms.TextBox(); // B
-            this.textBox4 = new System.Windows.Forms.TextBox(); // C
-            this.textBox5 = new System.Windows.Forms.TextBox(); // D
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -69,7 +69,7 @@ namespace wwtbam
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.label1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.Location = new System.Drawing.Point(42, 41);
             this.label1.MaximumSize = new System.Drawing.Size(215, 30);
             this.label1.MinimumSize = new System.Drawing.Size(215, 30);
@@ -93,12 +93,13 @@ namespace wwtbam
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(46, 285);
-            this.button1.MaximumSize = new System.Drawing.Size(350, 50);
-            this.button1.MinimumSize = new System.Drawing.Size(350, 50);
+            this.button1.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(25, 285);
+            this.button1.MaximumSize = new System.Drawing.Size(400, 60);
+            this.button1.MinimumSize = new System.Drawing.Size(400, 60);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(350, 50);
+            this.button1.Size = new System.Drawing.Size(400, 60);
+            this.button1.Padding = new Padding(50, 0, 50, 0);
             this.button1.TabIndex = 0;
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button1.UseVisualStyleBackColor = false;
@@ -121,12 +122,13 @@ namespace wwtbam
             this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button2.Location = new System.Drawing.Point(46, 364);
-            this.button2.MaximumSize = new System.Drawing.Size(350, 50);
-            this.button2.MinimumSize = new System.Drawing.Size(350, 50);
+            this.button2.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button2.Location = new System.Drawing.Point(25, 364);
+            this.button2.MaximumSize = new System.Drawing.Size(400, 60);
+            this.button2.MinimumSize = new System.Drawing.Size(400, 60);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(350, 50);
+            this.button2.Size = new System.Drawing.Size(400, 60);
+            this.button2.Padding = new Padding(50, 0, 50, 0);
             this.button2.TabIndex = 1;
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button2.UseVisualStyleBackColor = true;
@@ -148,12 +150,13 @@ namespace wwtbam
             this.button3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button3.Location = new System.Drawing.Point(495, 285);
-            this.button3.MaximumSize = new System.Drawing.Size(350, 50);
-            this.button3.MinimumSize = new System.Drawing.Size(350, 50);
+            this.button3.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button3.Location = new System.Drawing.Point(475, 285);
+            this.button3.MaximumSize = new System.Drawing.Size(400, 60);
+            this.button3.MinimumSize = new System.Drawing.Size(400, 60);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(350, 50);
+            this.button3.Size = new System.Drawing.Size(400, 60);
+            this.button3.Padding = new Padding(50, 0, 50, 0);
             this.button3.TabIndex = 2;
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button3.UseVisualStyleBackColor = true;
@@ -175,12 +178,13 @@ namespace wwtbam
             this.button4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button4.Location = new System.Drawing.Point(495, 364);
-            this.button4.MaximumSize = new System.Drawing.Size(350, 50);
-            this.button4.MinimumSize = new System.Drawing.Size(350, 50);
+            this.button4.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button4.Location = new System.Drawing.Point(475, 364);
+            this.button4.MaximumSize = new System.Drawing.Size(400, 60);
+            this.button4.MinimumSize = new System.Drawing.Size(400, 60);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(350, 50);
+            this.button4.Size = new System.Drawing.Size(400, 60);
+            this.button4.Padding = new Padding(50, 0, 50, 0);
             this.button4.TabIndex = 3;
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button4.UseVisualStyleBackColor = true;
@@ -200,8 +204,8 @@ namespace wwtbam
             this.button5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button5.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button5.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button5.Location = new System.Drawing.Point(45, 420);
+            this.button5.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button5.Location = new System.Drawing.Point(50, 425);
             this.button5.MaximumSize = new System.Drawing.Size(800, 34);
             this.button5.MinimumSize = new System.Drawing.Size(800, 34);
             this.button5.Name = "button5";
@@ -222,7 +226,7 @@ namespace wwtbam
             this.button0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button0.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button0.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button0.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button0.ForeColor = System.Drawing.Color.Transparent;
             this.button0.Location = new System.Drawing.Point(215, 200);
             this.button0.MaximumSize = new System.Drawing.Size(500, 60);
@@ -245,7 +249,7 @@ namespace wwtbam
             this.button13.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button13.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button13.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button13.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button13.ForeColor = System.Drawing.Color.Transparent;
             this.button13.Location = new System.Drawing.Point(260, 298);
             this.button13.MaximumSize = new System.Drawing.Size(400, 60);
@@ -269,8 +273,8 @@ namespace wwtbam
             this.button6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
             this.button6.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(197, 409);
+            this.button6.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button6.Location = new System.Drawing.Point(195, 415);
             this.button6.MaximumSize = new System.Drawing.Size(500, 45);
             this.button6.MinimumSize = new System.Drawing.Size(500, 45);
             this.button6.Name = "button6";
@@ -409,106 +413,111 @@ namespace wwtbam
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.label2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(96, 194);
-            this.label2.MaximumSize = new System.Drawing.Size(700, 80);
-            this.label2.MinimumSize = new System.Drawing.Size(700, 80);
+            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(45, 195);
+            this.label2.MaximumSize = new System.Drawing.Size(800, 80);
+            this.label2.MinimumSize = new System.Drawing.Size(800, 80);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(700, 80);
+            this.label2.Padding = new Padding(80, 0, 80, 0);
+            this.label2.Size = new System.Drawing.Size(800, 80);
             this.label2.TabIndex = 15;
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // textBox1
             // 
+            this.textBox1.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox1.Location = new System.Drawing.Point(305, 90);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox1.Size = new System.Drawing.Size(300, 40);
+            this.textBox1.Size = new System.Drawing.Size(300, 33);
             this.textBox1.TabIndex = 23;
             this.textBox1.Text = "Введите вопрос";
             this.textBox1.Visible = false;
             // 
             // textBox2
             // 
+            this.textBox2.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox2.Location = new System.Drawing.Point(205, 150);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox2.Size = new System.Drawing.Size(200, 30);
+            this.textBox2.Size = new System.Drawing.Size(200, 33);
             this.textBox2.TabIndex = 24;
             this.textBox2.Text = "Введите ответ A";
             this.textBox2.Visible = false;
             // 
             // textBox3
             // 
+            this.textBox3.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox3.Location = new System.Drawing.Point(205, 200);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox3.Size = new System.Drawing.Size(200, 30);
+            this.textBox3.Size = new System.Drawing.Size(200, 33);
             this.textBox3.TabIndex = 25;
             this.textBox3.Text = "Введите ответ B";
             this.textBox3.Visible = false;
             // 
             // textBox4
             // 
+            this.textBox4.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox4.Location = new System.Drawing.Point(205, 250);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Size = new System.Drawing.Size(200, 30);
+            this.textBox4.Size = new System.Drawing.Size(200, 33);
             this.textBox4.TabIndex = 26;
             this.textBox4.Text = "Введите ответ C";
             this.textBox4.Visible = false;
             // 
             // textBox5
             // 
+            this.textBox5.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.textBox5.Location = new System.Drawing.Point(205, 300);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Font = new System.Drawing.Font("Century Gothic", 11.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Size = new System.Drawing.Size(200, 30);
+            this.textBox5.Size = new System.Drawing.Size(200, 33);
             this.textBox5.TabIndex = 27;
             this.textBox5.Text = "Введите ответ D";
             this.textBox5.Visible = false;
             // 
             // radioButton1
             // 
+            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Location = new System.Drawing.Point(415, 150);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.BackColor = System.Drawing.Color.Transparent;
             this.radioButton1.Size = new System.Drawing.Size(28, 28);
             this.radioButton1.TabIndex = 19;
+            this.radioButton1.UseVisualStyleBackColor = false;
             this.radioButton1.Visible = false;
             // 
             // radioButton2
             // 
+            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Location = new System.Drawing.Point(415, 200);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.BackColor = System.Drawing.Color.Transparent;
             this.radioButton2.Size = new System.Drawing.Size(28, 28);
             this.radioButton2.TabIndex = 20;
+            this.radioButton2.UseVisualStyleBackColor = false;
             this.radioButton2.Visible = false;
             // 
             // radioButton3
             // 
+            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Location = new System.Drawing.Point(415, 250);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.BackColor = System.Drawing.Color.Transparent;
             this.radioButton3.Size = new System.Drawing.Size(28, 28);
             this.radioButton3.TabIndex = 21;
+            this.radioButton3.UseVisualStyleBackColor = false;
             this.radioButton3.Visible = false;
             // 
             // radioButton4
             // 
+            this.radioButton4.BackColor = System.Drawing.Color.Transparent;
             this.radioButton4.Location = new System.Drawing.Point(415, 300);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.BackColor = System.Drawing.Color.Transparent;
             this.radioButton4.Size = new System.Drawing.Size(28, 28);
             this.radioButton4.TabIndex = 22;
+            this.radioButton4.UseVisualStyleBackColor = false;
             this.radioButton4.Visible = false;
             // 
             // button14
             // 
+            this.button14.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button14.Location = new System.Drawing.Point(200, 400);
             this.button14.Name = "button14";
-            this.button14.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button14.Size = new System.Drawing.Size(200, 40);
             this.button14.TabIndex = 17;
             this.button14.Text = "Добавить вопрос";
@@ -519,9 +528,9 @@ namespace wwtbam
             // 
             // button15
             // 
+            this.button15.Font = new System.Drawing.Font("Comic Sans MS", 13.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button15.Location = new System.Drawing.Point(600, 400);
             this.button15.Name = "button15";
-            this.button15.Font = new System.Drawing.Font("Century Gothic", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.button15.Size = new System.Drawing.Size(200, 40);
             this.button15.TabIndex = 18;
             this.button15.Text = "Завершить список";
@@ -567,7 +576,6 @@ namespace wwtbam
             this.Controls.Add(this.textBox5);
             this.Cursor = System.Windows.Forms.Cursors.PanNW;
             this.DoubleBuffered = true;
-            this.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(910, 500);
             this.Name = "Form1";

@@ -4,8 +4,6 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace wwtbam
 {
@@ -18,6 +16,9 @@ namespace wwtbam
         private string selected = "";
         string questions = "";
         int questionsCount = 1;
+
+        string font = "Comic Sans MS";
+
         public Form1()
         {
             InitializeComponent();
@@ -112,6 +113,7 @@ namespace wwtbam
                     string _b = data[3];
                     string _c = data[4];
                     string _d = data[5];
+
                     right = data[6];
                     fixRight();
                     selected = "";
@@ -268,19 +270,19 @@ namespace wwtbam
             switch (right)
             {
                 case "A":
-                    button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    button1.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                     button1.BackgroundImage = Properties.Resources.goodAnswer;
                     break;
                 case "B":
-                    button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    button2.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                     button2.BackgroundImage = Properties.Resources.goodAnswer;
                     break;
                 case "C":
-                    button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    button3.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                     button3.BackgroundImage = Properties.Resources.goodAnswer;
                     break;
                 case "D":
-                    button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                    button4.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                     button4.BackgroundImage = Properties.Resources.goodAnswer;
                     break;
                 default:
@@ -291,19 +293,19 @@ namespace wwtbam
                 switch (selected)
                 {
                     case "A":
-                        button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        button1.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                         button1.BackgroundImage = Properties.Resources.badAnswer;
                         break;
                     case "B":
-                        button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        button2.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                         button2.BackgroundImage = Properties.Resources.badAnswer;
                         break;
                     case "C":
-                        button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        button3.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                         button3.BackgroundImage = Properties.Resources.badAnswer;
                         break;
                     case "D":
-                        button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+                        button4.Font = new Font(font, 13.75F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(204)));
                         button4.BackgroundImage = Properties.Resources.badAnswer;
                         break;
                     default:
@@ -335,14 +337,14 @@ namespace wwtbam
             button3.Text = "";
             button4.Text = "";
 
-            button1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            button1.ForeColor = System.Drawing.Color.Black;
-            button2.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            button2.ForeColor = System.Drawing.Color.Black;
-            button3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            button3.ForeColor = System.Drawing.Color.Black;
-            button4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            button4.ForeColor = System.Drawing.Color.Black;
+            button1.Font = new Font(font, 13.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
+            button1.ForeColor = Color.Black;
+            button2.Font = new Font(font, 13.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
+            button2.ForeColor = Color.Black;
+            button3.Font = new Font(font, 13.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
+            button3.ForeColor = Color.Black;
+            button4.Font = new Font(font, 13.75F, FontStyle.Regular, GraphicsUnit.Point, ((byte)(204)));
+            button4.ForeColor = Color.Black;
 
             button1.BackgroundImage = Properties.Resources.emptyField;
             button2.BackgroundImage = Properties.Resources.emptyField;
